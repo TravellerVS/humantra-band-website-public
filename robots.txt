@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://humantraband.com/sitemap.xml
