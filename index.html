@@ -32,6 +32,43 @@
     <meta property="twitter:description" content="A modern rock and grunge band from Zagreb, Croatia. Raw sound, powerful vocals, gritty aesthetic." />
     <meta property="twitter:image" content="https://humantraband.com/images/HumantraBanner_1200.jpg" />
     <meta name="theme-color" content="#000000" />
+    <style>
+      body {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        margin: 0;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+      .loading-container {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        background-color: #1a1a1a;
+      }
+      .loading-spinner {
+        animation: spin 1.5s linear infinite;
+        color: #991b1b;
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .sr-only-seo {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -81,32 +118,41 @@
     <script type="module" crossorigin src="/assets/index-7MIuUBe3.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CDlovS8W.css">
   </head>
-  <body class="bg-grunge-900 text-white">
+  <body class="bg-grunge-900 text-white" style="background-color: #1a1a1a; color: #ffffff;">
     <div id="root">
-      <header>
-        <h1>Humantra | Alternative Rock & Grunge Band from Zagreb</h1>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#music">Music</a></li>
-            <li><a href="#bio">Biography</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <section id="welcome">
-          <h2>Welcome to Humantra</h2>
-          <p>Humantra is a modern rock and grunge band from Zagreb, Croatia. Experience our raw sound, powerful vocals, and gritty aesthetic. Listen to our latest singles Aha and Borderline.</p>
-        </section>
-        <section id="about-band">
-          <h2>About the Band</h2>
-          <p>Formed in 2021, Humantra is a three-piece band consisting of Morana Bing (vocals), Mauro Cherin (drums), and Vedran Semenski (guitar). Our music blends classic grunge with modern alternative rock energy.</p>
-        </section>
-      </main>
-      <footer>
-        <p>&copy; 2026 Humantra. All rights reserved.</p>
-      </footer>
+      <div class="loading-container" id="initial-loader">
+        <svg class="loading-spinner" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m16 6 4 4" />
+          <path d="m8 18-4-4" />
+          <path d="m3.5 15.5 10-10C15 4 16 4 17 5s1 2 0 3.5l-10 10c-.5.5-1 .5-1.5 0l-2-2c-.5-.5-.5-1 0-1.5Z" />
+        </svg>
+      </div>
+      <div class="sr-only-seo">
+        <header>
+          <h1>Humantra | Alternative Rock & Grunge Band from Zagreb</h1>
+          <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#music">Music</a></li>
+              <li><a href="#bio">Biography</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <section id="welcome">
+            <h2>Welcome to Humantra</h2>
+            <p>Humantra is a modern rock and grunge band from Zagreb, Croatia. Experience our raw sound, powerful vocals, and gritty aesthetic. Listen to our latest singles Aha and Borderline.</p>
+          </section>
+          <section id="about-band">
+            <h2>About the Band</h2>
+            <p>Formed in 2021, Humantra is a three-piece band consisting of Morana Bing (vocals), Mauro Cherin (drums), and Vedran Semenski (guitar). Our music blends classic grunge with modern alternative rock energy.</p>
+          </section>
+        </main>
+        <footer>
+          <p>&copy; 2026 Humantra. All rights reserved.</p>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
